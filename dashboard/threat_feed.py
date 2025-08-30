@@ -4,19 +4,31 @@ import pandas as pd
 
 def display_threat_feed(df: pd.DataFrame):
     st.markdown("### 🔥 Top Hostile Tweets")
-    st.info("Displaying the most viral hostile tweets, ranked by engagement score.")
+    st.info("Displaying the most viral hostile tweets, ranked by engagement.")
     
-    hostile_df = df[df['sentiment_label'] == 'Hostile'].copy()
+    hostile_df = df[df['sentiment_label'] == 'Hostile']
     
     if hostile_df.empty:
-        st.success("✅ No hostile tweets detected in the current dataset.")
+        st.success("✅ No hostile tweets detected in the current filtered dataset.")
         return
 
-    # Use st.expander to show tweets without cluttering the UI
-    for index, row in hostile_df.head(5).iterrows():
-        with st.expander(f"**Author {row['author_id']}** | Engagement: **{row['engagement_score']:.0f}**"):
-            st.markdown(f"> {row['text']}")
-            st.markdown(f"**Metrics:** 👍 {row['like_count']} | 🔁 {row['retweet_count']} | 💬 {row['reply_count']} | 引用 {row['quote_count']}")
-            # Create a clickable link to the tweet
-            tweet_url = f"https://twitter.com/anyuser/status/{row['tweet_id']}"
-            st.markdown(f"[View on X/Twitter]({tweet_url})")
+    for _, row in hostile_df.head(10).iterrows():
+        st.markdown("---")
+        author_id = row['author_id']
+        tweet_url = f"https://twitter.com/anyuser/status/{row['tweet_id']}"
+
+        # Create a card-like layout
+        st.markdown(f"""
+        <div style="border: 1px solid #333; border-radius: 10px; padding: 15px; margin-bottom: 10px;">
+            <p><strong>Author:</strong> <code>{author_id}</code> | <a href="{tweet_url}" target="_blank">View on X/Twitter</a></p>
+            <p><em>"{row['text']}"</em></p>
+            <hr style="border-color: #333;">
+            <p>
+                <strong>Engagement: {row['engagement_score']:.0f}</strong> |
+                👍 {row['like_count']:,} |
+                🔁 {row['retweet_count']:,} |
+                💬 {row['reply_count']:,} |
+                🔗 {row['quote_count']:,}
+            </p>
+        </div>
+        """, unsafe_allow_html=True)

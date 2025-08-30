@@ -8,23 +8,24 @@ def display_kpi_metrics(df: pd.DataFrame):
     total_tweets = len(df)
     hostile_tweets = len(df[df['sentiment_label'] == 'Hostile'])
     hostility_ratio = (hostile_tweets / total_tweets) * 100 if total_tweets > 0 else 0
-    
-    # Calculate the number of unique authors
     unique_authors = df['author_id'].nunique()
     
-    col1, col2, col3, col4 = st.columns(4)
-    
-    with col1:
-        st.metric(label="Total Tweets Analyzed", value=f"{total_tweets:,}")
-    
-    with col2:
-        st.metric(label="Hostile Tweets Detected", value=f"{hostile_tweets:,}")
-        
-    with col3:
-        st.metric(label="Hostility Ratio", value=f"{hostility_ratio:.2f}%")
+    # Calculate Bot-Like Accounts if bot_score column exists
+    bot_like_accounts = "N/A"
+    if 'bot_score' in df.columns:
+        bot_like_accounts = len(df[df['bot_score'] > 75]) # Threshold for a high bot score
 
-    with col4:
-        st.metric(label="Unique Authors", value=f"{unique_authors:,}")
+    cols = st.columns(5)
+    with cols[0]:
+        st.metric("Total Tweets", f"{total_tweets:,}")
+    with cols[1]:
+        st.metric("🔴 Hostile Tweets", f"{hostile_tweets:,}")
+    with cols[2]:
+        st.metric("Hostility Ratio", f"{hostility_ratio:.2f}%")
+    with cols[3]:
+        st.metric("👥 Unique Authors", f"{unique_authors:,}")
+    with cols[4]:
+        st.metric("🤖 Bot-Like Activity", str(bot_like_accounts), help="Number of tweets from accounts with a bot score > 75")
 
     if hostility_ratio > 15:
-        st.error(f"🚨 **High Threat Alert:** Hostility ratio is at {hostility_ratio:.2f}%, indicating a potential coordinated campaign.")
+        st.error(f"🚨 **High Threat Alert:** Hostility ratio is at **{hostility_ratio:.2f}%**, exceeding the 15% threshold.")
