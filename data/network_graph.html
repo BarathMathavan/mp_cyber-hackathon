@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 750px;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#00a1e4", "font": {"color": "white"}, "id": "1861427757630287872", "label": "1861427757630287872", "shape": "dot", "title": "Author ID: 1861427757630287872"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "DillyHussain88", "label": "DillyHussain88", "shape": "dot", "title": "Mentioned User: @DillyHussain88"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "gmpolice", "label": "gmpolice", "shape": "dot", "title": "Mentioned User: @gmpolice"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1703774667394445312", "label": "1703774667394445312", "shape": "dot", "title": "Author ID: 1703774667394445312"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "monidipadey", "label": "monidipadey", "shape": "dot", "title": "Mentioned User: @monidipadey"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "punarutthana", "label": "punarutthana", "shape": "dot", "title": "Mentioned User: @punarutthana"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "BattaKashmiri", "label": "BattaKashmiri", "shape": "dot", "title": "Mentioned User: @BattaKashmiri"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "Incognito_qfs", "label": "Incognito_qfs", "shape": "dot", "title": "Mentioned User: @Incognito_qfs"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "28335828", "label": "28335828", "shape": "dot", "title": "Author ID: 28335828"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "ScCardoz", "label": "ScCardoz", "shape": "dot", "title": "Mentioned User: @ScCardoz"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1730425278", "label": "1730425278", "shape": "dot", "title": "Author ID: 1730425278"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "sardesairajdeep", "label": "sardesairajdeep", "shape": "dot", "title": "Mentioned User: @sardesairajdeep"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1360202290934599680", "label": "1360202290934599680", "shape": "dot", "title": "Author ID: 1360202290934599680"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "Priyans28370412", "label": "Priyans28370412", "shape": "dot", "title": "Mentioned User: @Priyans28370412"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "GopeshKhetan", "label": "GopeshKhetan", "shape": "dot", "title": "Mentioned User: @GopeshKhetan"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "gork", "label": "gork", "shape": "dot", "title": "Mentioned User: @gork"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "grok", "label": "grok", "shape": "dot", "title": "Mentioned User: @grok"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "3061600039", "label": "3061600039", "shape": "dot", "title": "Author ID: 3061600039"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "catalyxspace", "label": "catalyxspace", "shape": "dot", "title": "Mentioned User: @catalyxspace"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1024688245521702913", "label": "1024688245521702913", "shape": "dot", "title": "Author ID: 1024688245521702913"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "Fasihrayeen", "label": "Fasihrayeen", "shape": "dot", "title": "Mentioned User: @Fasihrayeen"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "97603597", "label": "97603597", "shape": "dot", "title": "Author ID: 97603597"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "DobbyTheSlayer1", "label": "DobbyTheSlayer1", "shape": "dot", "title": "Mentioned User: @DobbyTheSlayer1"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "cornelius_cen", "label": "cornelius_cen", "shape": "dot", "title": "Mentioned User: @cornelius_cen"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "afsdfgj", "label": "afsdfgj", "shape": "dot", "title": "Mentioned User: @afsdfgj"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "PalhawatRadhika", "label": "PalhawatRadhika", "shape": "dot", "title": "Mentioned User: @PalhawatRadhika"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "897845496269611008", "label": "897845496269611008", "shape": "dot", "title": "Author ID: 897845496269611008"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "ARN635", "label": "ARN635", "shape": "dot", "title": "Mentioned User: @ARN635"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "SirJambavan", "label": "SirJambavan", "shape": "dot", "title": "Mentioned User: @SirJambavan"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "KaavyaRBagri", "label": "KaavyaRBagri", "shape": "dot", "title": "Mentioned User: @KaavyaRBagri"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "officiallysane", "label": "officiallysane", "shape": "dot", "title": "Mentioned User: @officiallysane"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1829425206617591808", "label": "1829425206617591808", "shape": "dot", "title": "Author ID: 1829425206617591808"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "IvankaNews_", "label": "IvankaNews_", "shape": "dot", "title": "Mentioned User: @IvankaNews_"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1443630928908242945", "label": "1443630928908242945", "shape": "dot", "title": "Author ID: 1443630928908242945"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "BananaRepub69", "label": "BananaRepub69", "shape": "dot", "title": "Mentioned User: @BananaRepub69"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "Majk1024437", "label": "Majk1024437", "shape": "dot", "title": "Mentioned User: @Majk1024437"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "bassem_youssef9", "label": "bassem_youssef9", "shape": "dot", "title": "Mentioned User: @bassem_youssef9"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1792951608344788992", "label": "1792951608344788992", "shape": "dot", "title": "Author ID: 1792951608344788992"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "dasyuslayer1", "label": "dasyuslayer1", "shape": "dot", "title": "Mentioned User: @dasyuslayer1"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "733678637099143168", "label": "733678637099143168", "shape": "dot", "title": "Author ID: 733678637099143168"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "akuparop", "label": "akuparop", "shape": "dot", "title": "Mentioned User: @akuparop"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1746588975614046208", "label": "1746588975614046208", "shape": "dot", "title": "Author ID: 1746588975614046208"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "Siddhar64850525", "label": "Siddhar64850525", "shape": "dot", "title": "Mentioned User: @Siddhar64850525"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "ChinaSpox_India", "label": "ChinaSpox_India", "shape": "dot", "title": "Mentioned User: @ChinaSpox_India"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1707150805", "label": "1707150805", "shape": "dot", "title": "Author ID: 1707150805"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "_sabanaqvi", "label": "_sabanaqvi", "shape": "dot", "title": "Mentioned User: @_sabanaqvi"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "USCIRF", "label": "USCIRF", "shape": "dot", "title": "Mentioned User: @USCIRF"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "851290496030855168", "label": "851290496030855168", "shape": "dot", "title": "Author ID: 851290496030855168"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "OmarAbdullah", "label": "OmarAbdullah", "shape": "dot", "title": "Mentioned User: @OmarAbdullah"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1639958277483290624", "label": "1639958277483290624", "shape": "dot", "title": "Author ID: 1639958277483290624"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1334732741708013574", "label": "1334732741708013574", "shape": "dot", "title": "Author ID: 1334732741708013574"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "ramvedii", "label": "ramvedii", "shape": "dot", "title": "Mentioned User: @ramvedii"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1081878313780559873", "label": "1081878313780559873", "shape": "dot", "title": "Author ID: 1081878313780559873"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "DrBush15", "label": "DrBush15", "shape": "dot", "title": "Mentioned User: @DrBush15"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "Physics301", "label": "Physics301", "shape": "dot", "title": "Mentioned User: @Physics301"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "empire_sentry", "label": "empire_sentry", "shape": "dot", "title": "Mentioned User: @empire_sentry"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "D_Tarczynski", "label": "D_Tarczynski", "shape": "dot", "title": "Mentioned User: @D_Tarczynski"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1937057839815761920", "label": "1937057839815761920", "shape": "dot", "title": "Author ID: 1937057839815761920"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "Swamy39", "label": "Swamy39", "shape": "dot", "title": "Mentioned User: @Swamy39"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "jagdishshetty", "label": "jagdishshetty", "shape": "dot", "title": "Mentioned User: @jagdishshetty"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "narendramodi", "label": "narendramodi", "shape": "dot", "title": "Mentioned User: @narendramodi"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1356745165642354691", "label": "1356745165642354691", "shape": "dot", "title": "Author ID: 1356745165642354691"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "PMOIndia", "label": "PMOIndia", "shape": "dot", "title": "Mentioned User: @PMOIndia"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1525082770711658504", "label": "1525082770711658504", "shape": "dot", "title": "Author ID: 1525082770711658504"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "Reuters", "label": "Reuters", "shape": "dot", "title": "Mentioned User: @Reuters"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1734230216309133312", "label": "1734230216309133312", "shape": "dot", "title": "Author ID: 1734230216309133312"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "FattahbalochH", "label": "FattahbalochH", "shape": "dot", "title": "Mentioned User: @FattahbalochH"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "SouthernDefence", "label": "SouthernDefence", "shape": "dot", "title": "Mentioned User: @SouthernDefence"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "888544250723479552", "label": "888544250723479552", "shape": "dot", "title": "Author ID: 888544250723479552"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "rajseshadri", "label": "rajseshadri", "shape": "dot", "title": "Mentioned User: @rajseshadri"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "terryrus99", "label": "terryrus99", "shape": "dot", "title": "Mentioned User: @terryrus99"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "ryangrim", "label": "ryangrim", "shape": "dot", "title": "Mentioned User: @ryangrim"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1648263162804961281", "label": "1648263162804961281", "shape": "dot", "title": "Author ID: 1648263162804961281"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "Sham_Bharat", "label": "Sham_Bharat", "shape": "dot", "title": "Mentioned User: @Sham_Bharat"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1852229311497170944", "label": "1852229311497170944", "shape": "dot", "title": "Author ID: 1852229311497170944"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "GreaterKashmir", "label": "GreaterKashmir", "shape": "dot", "title": "Mentioned User: @GreaterKashmir"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1650555935797153794", "label": "1650555935797153794", "shape": "dot", "title": "Author ID: 1650555935797153794"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "VHPDigital", "label": "VHPDigital", "shape": "dot", "title": "Mentioned User: @VHPDigital"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "rss", "label": "rss", "shape": "dot", "title": "Mentioned User: @rss"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "TulsiGabbard", "label": "TulsiGabbard", "shape": "dot", "title": "Mentioned User: @TulsiGabbard"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "ANI", "label": "ANI", "shape": "dot", "title": "Mentioned User: @ANI"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1453005127103750153", "label": "1453005127103750153", "shape": "dot", "title": "Author ID: 1453005127103750153"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "POTUS", "label": "POTUS", "shape": "dot", "title": "Mentioned User: @POTUS"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "IMFNews", "label": "IMFNews", "shape": "dot", "title": "Mentioned User: @IMFNews"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "EUCouncil", "label": "EUCouncil", "shape": "dot", "title": "Mentioned User: @EUCouncil"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1684196284977287168", "label": "1684196284977287168", "shape": "dot", "title": "Author ID: 1684196284977287168"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "375038314", "label": "375038314", "shape": "dot", "title": "Author ID: 375038314"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "Mohansinha", "label": "Mohansinha", "shape": "dot", "title": "Mentioned User: @Mohansinha"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1439618116602916867", "label": "1439618116602916867", "shape": "dot", "title": "Author ID: 1439618116602916867"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "ItsShubhangi", "label": "ItsShubhangi", "shape": "dot", "title": "Mentioned User: @ItsShubhangi"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1533846670152179714", "label": "1533846670152179714", "shape": "dot", "title": "Author ID: 1533846670152179714"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "MeghUpdates", "label": "MeghUpdates", "shape": "dot", "title": "Mentioned User: @MeghUpdates"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1311127075957350400", "label": "1311127075957350400", "shape": "dot", "title": "Author ID: 1311127075957350400"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "realDonaldTrump", "label": "realDonaldTrump", "shape": "dot", "title": "Mentioned User: @realDonaldTrump"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1879493498967400448", "label": "1879493498967400448", "shape": "dot", "title": "Author ID: 1879493498967400448"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "HindutvaDiva", "label": "HindutvaDiva", "shape": "dot", "title": "Mentioned User: @HindutvaDiva"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1614795745877712897", "label": "1614795745877712897", "shape": "dot", "title": "Author ID: 1614795745877712897"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "RSSorg", "label": "RSSorg", "shape": "dot", "title": "Mentioned User: @RSSorg"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "1830885883228114947", "label": "1830885883228114947", "shape": "dot", "title": "Author ID: 1830885883228114947"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "elonmusk", "label": "elonmusk", "shape": "dot", "title": "Mentioned User: @elonmusk"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "100777670", "label": "100777670", "shape": "dot", "title": "Author ID: 100777670"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "khanumarfa", "label": "khanumarfa", "shape": "dot", "title": "Mentioned User: @khanumarfa"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "RanaAyyub", "label": "RanaAyyub", "shape": "dot", "title": "Mentioned User: @RanaAyyub"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "_sayema", "label": "_sayema", "shape": "dot", "title": "Mentioned User: @_sayema"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "25429629", "label": "25429629", "shape": "dot", "title": "Author ID: 25429629"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "Ram_Guha", "label": "Ram_Guha", "shape": "dot", "title": "Mentioned User: @Ram_Guha"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "RahulGandhi", "label": "RahulGandhi", "shape": "dot", "title": "Mentioned User: @RahulGandhi"}, {"color": "#00a1e4", "font": {"color": "white"}, "id": "829306145475002370", "label": "829306145475002370", "shape": "dot", "title": "Author ID: 829306145475002370"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "DilrajD5", "label": "DilrajD5", "shape": "dot", "title": "Mentioned User: @DilrajD5"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "fuddukismatwala", "label": "fuddukismatwala", "shape": "dot", "title": "Mentioned User: @fuddukismatwala"}, {"color": "#ff756e", "font": {"color": "white"}, "id": "kushal_mehra", "label": "kushal_mehra", "shape": "dot", "title": "Mentioned User: @kushal_mehra"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "1861427757630287872", "to": "DillyHussain88"}, {"arrows": "to", "from": "1861427757630287872", "to": "gmpolice"}, {"arrows": "to", "from": "1703774667394445312", "to": "monidipadey"}, {"arrows": "to", "from": "1703774667394445312", "to": "punarutthana"}, {"arrows": "to", "from": "1703774667394445312", "to": "BattaKashmiri"}, {"arrows": "to", "from": "1703774667394445312", "to": "Incognito_qfs"}, {"arrows": "to", "from": "28335828", "to": "ScCardoz"}, {"arrows": "to", "from": "1730425278", "to": "sardesairajdeep"}, {"arrows": "to", "from": "1360202290934599680", "to": "Priyans28370412"}, {"arrows": "to", "from": "1360202290934599680", "to": "GopeshKhetan"}, {"arrows": "to", "from": "1360202290934599680", "to": "gork"}, {"arrows": "to", "from": "1360202290934599680", "to": "grok"}, {"arrows": "to", "from": "3061600039", "to": "catalyxspace"}, {"arrows": "to", "from": "1024688245521702913", "to": "Fasihrayeen"}, {"arrows": "to", "from": "97603597", "to": "DobbyTheSlayer1"}, {"arrows": "to", "from": "97603597", "to": "grok"}, {"arrows": "to", "from": "97603597", "to": "cornelius_cen"}, {"arrows": "to", "from": "97603597", "to": "afsdfgj"}, {"arrows": "to", "from": "97603597", "to": "PalhawatRadhika"}, {"arrows": "to", "from": "897845496269611008", "to": "ARN635"}, {"arrows": "to", "from": "897845496269611008", "to": "SirJambavan"}, {"arrows": "to", "from": "1360202290934599680", "to": "KaavyaRBagri"}, {"arrows": "to", "from": "1360202290934599680", "to": "officiallysane"}, {"arrows": "to", "from": "1829425206617591808", "to": "IvankaNews_"}, {"arrows": "to", "from": "1443630928908242945", "to": "BananaRepub69"}, {"arrows": "to", "from": "1443630928908242945", "to": "Majk1024437"}, {"arrows": "to", "from": "1443630928908242945", "to": "bassem_youssef9"}, {"arrows": "to", "from": "1792951608344788992", "to": "dasyuslayer1"}, {"arrows": "to", "from": "733678637099143168", "to": "akuparop"}, {"arrows": "to", "from": "733678637099143168", "to": "GopeshKhetan"}, {"arrows": "to", "from": "733678637099143168", "to": "GopeshKhetan"}, {"arrows": "to", "from": "1746588975614046208", "to": "Siddhar64850525"}, {"arrows": "to", "from": "1746588975614046208", "to": "ChinaSpox_India"}, {"arrows": "to", "from": "1707150805", "to": "_sabanaqvi"}, {"arrows": "to", "from": "1707150805", "to": "USCIRF"}, {"arrows": "to", "from": "851290496030855168", "to": "OmarAbdullah"}, {"arrows": "to", "from": "1639958277483290624", "to": "PalhawatRadhika"}, {"arrows": "to", "from": "1334732741708013574", "to": "ramvedii"}, {"arrows": "to", "from": "1081878313780559873", "to": "DrBush15"}, {"arrows": "to", "from": "1081878313780559873", "to": "Physics301"}, {"arrows": "to", "from": "1081878313780559873", "to": "empire_sentry"}, {"arrows": "to", "from": "1081878313780559873", "to": "D_Tarczynski"}, {"arrows": "to", "from": "1937057839815761920", "to": "Swamy39"}, {"arrows": "to", "from": "1937057839815761920", "to": "jagdishshetty"}, {"arrows": "to", "from": "1937057839815761920", "to": "narendramodi"}, {"arrows": "to", "from": "1356745165642354691", "to": "PMOIndia"}, {"arrows": "to", "from": "1356745165642354691", "to": "narendramodi"}, {"arrows": "to", "from": "1356745165642354691", "to": "narendramodi"}, {"arrows": "to", "from": "1525082770711658504", "to": "Reuters"}, {"arrows": "to", "from": "1356745165642354691", "to": "PMOIndia"}, {"arrows": "to", "from": "1356745165642354691", "to": "narendramodi"}, {"arrows": "to", "from": "1734230216309133312", "to": "FattahbalochH"}, {"arrows": "to", "from": "1734230216309133312", "to": "SouthernDefence"}, {"arrows": "to", "from": "888544250723479552", "to": "rajseshadri"}, {"arrows": "to", "from": "888544250723479552", "to": "terryrus99"}, {"arrows": "to", "from": "888544250723479552", "to": "ryangrim"}, {"arrows": "to", "from": "1648263162804961281", "to": "Sham_Bharat"}, {"arrows": "to", "from": "1852229311497170944", "to": "GreaterKashmir"}, {"arrows": "to", "from": "1650555935797153794", "to": "VHPDigital"}, {"arrows": "to", "from": "1650555935797153794", "to": "rss"}, {"arrows": "to", "from": "1650555935797153794", "to": "TulsiGabbard"}, {"arrows": "to", "from": "1650555935797153794", "to": "ANI"}, {"arrows": "to", "from": "1453005127103750153", "to": "POTUS"}, {"arrows": "to", "from": "1453005127103750153", "to": "IMFNews"}, {"arrows": "to", "from": "1453005127103750153", "to": "EUCouncil"}, {"arrows": "to", "from": "1684196284977287168", "to": "sardesairajdeep"}, {"arrows": "to", "from": "375038314", "to": "Mohansinha"}, {"arrows": "to", "from": "1439618116602916867", "to": "ItsShubhangi"}, {"arrows": "to", "from": "1533846670152179714", "to": "MeghUpdates"}, {"arrows": "to", "from": "1311127075957350400", "to": "PMOIndia"}, {"arrows": "to", "from": "1311127075957350400", "to": "realDonaldTrump"}, {"arrows": "to", "from": "1879493498967400448", "to": "HindutvaDiva"}, {"arrows": "to", "from": "1614795745877712897", "to": "RSSorg"}, {"arrows": "to", "from": "1830885883228114947", "to": "elonmusk"}, {"arrows": "to", "from": "100777670", "to": "khanumarfa"}, {"arrows": "to", "from": "100777670", "to": "RanaAyyub"}, {"arrows": "to", "from": "100777670", "to": "_sabanaqvi"}, {"arrows": "to", "from": "100777670", "to": "_sayema"}, {"arrows": "to", "from": "25429629", "to": "Ram_Guha"}, {"arrows": "to", "from": "25429629", "to": "RahulGandhi"}, {"arrows": "to", "from": "829306145475002370", "to": "DilrajD5"}, {"arrows": "to", "from": "829306145475002370", "to": "fuddukismatwala"}, {"arrows": "to", "from": "829306145475002370", "to": "kushal_mehra"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+# requirements.txt
+
+# --- Core Libraries ---
+pandas
+streamlit
+python-dotenv
+
+# --- Twitter API Access ---
+tweepy
+
+# --- Natural Language Processing ---
+# TextBlob is simpler for a hackathon. nltk is more powerful but requires downloading data.
+textblob
+
+# --- Network Analysis & Visualization ---
+networkx
+pyvis
+plotly
