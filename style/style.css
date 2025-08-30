@@ -1,0 +1,52 @@
+/* style/style.css */
+
+/* --- General App Styling --- */
+body {
+    background-color: #0E1117;
+}
+
+/* --- Main Dashboard Title --- */
+h1 {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 8px rgba(255, 107, 107, 0.5); /* A subtle red glow */
+}
+
+/* --- Metric Cards Styling --- */
+[data-testid="stMetric"] {
+    background-color: rgba(40, 40, 60, 0.5); /* Dark blue/purple transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+[data-testid="stMetric"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.2);
+}
+
+[data-testid="stMetricLabel"] {
+    color: #a0a0b0; /* Lighter label color */
+}
+
+/* --- Tab Styling --- */
+.stTabs [data-baseweb="tab-list"] {
+	gap: 24px;
+}
+
+.stTabs [data-baseweb="tab"] {
+	height: 50px;
+    white-space: pre-wrap;
+	background-color: transparent;
+	border-radius: 4px 4px 0px 0px;
+	gap: 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.stTabs [aria-selected="true"] {
+  	background-color: #1a1c24;
+    color: #FF4B4B; /* Red for selected tab */
+    font-weight: bold;
+}

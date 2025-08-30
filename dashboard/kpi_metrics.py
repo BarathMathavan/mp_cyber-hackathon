@@ -3,30 +3,28 @@ import streamlit as st
 import pandas as pd
 
 def display_kpi_metrics(df: pd.DataFrame):
-    """Displays the key performance indicators at the top of the dashboard."""
-    st.header("📈 Live Campaign Overview")
+    st.markdown("### 📈 Live Campaign Vitals")
     
-    # Calculate KPIs
     total_tweets = len(df)
     hostile_tweets = len(df[df['sentiment_label'] == 'Hostile'])
     hostility_ratio = (hostile_tweets / total_tweets) * 100 if total_tweets > 0 else 0
     
-    # Find the most impactful hostile tweet
-    most_impactful_tweet = df[df['sentiment_label'] == 'Hostile'].iloc[0] if hostile_tweets > 0 else None
+    # Calculate the number of unique authors
+    unique_authors = df['author_id'].nunique()
     
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     
     with col1:
         st.metric(label="Total Tweets Analyzed", value=f"{total_tweets:,}")
     
     with col2:
-        st.metric(label="Hostile Tweets Detected", value=f"{hostile_tweets:,}",
-                  help="Tweets with a sentiment polarity score below -0.05")
+        st.metric(label="Hostile Tweets Detected", value=f"{hostile_tweets:,}")
         
     with col3:
-        st.metric(label="Hostility Ratio", value=f"{hostility_ratio:.2f}%",
-                  help="The percentage of all analyzed tweets that are classified as hostile.")
+        st.metric(label="Hostility Ratio", value=f"{hostility_ratio:.2f}%")
 
-    # Display an alert if the ratio is high
-    if hostility_ratio > 15: # Set your own threshold
-        st.error(f"🚨 ALERT: High hostility ratio detected at {hostility_ratio:.2f}%. Potential coordinated campaign in progress.")
+    with col4:
+        st.metric(label="Unique Authors", value=f"{unique_authors:,}")
+
+    if hostility_ratio > 15:
+        st.error(f"🚨 **High Threat Alert:** Hostility ratio is at {hostility_ratio:.2f}%, indicating a potential coordinated campaign.")
