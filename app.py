@@ -4,12 +4,14 @@ import streamlit as st
 import pandas as pd
 import os
 
-# Import all our dashboard components
+# Import dashboard components
 from dashboard.kpi_metrics import display_kpi_metrics
 from dashboard.threat_feed import display_threat_feed
 from dashboard.analytics_charts import display_analytics_charts
 from dashboard.network_graph import display_network_graph
 from dashboard.campaign_forensics import display_campaign_forensics
+# --- NEW: Import the map view component ---
+from dashboard.map_view import display_map_view
 
 # Page Config
 st.set_page_config(
@@ -30,10 +32,11 @@ def load_css(file_name):
 def load_data(filepath: str) -> pd.DataFrame:
     if os.path.exists(filepath):
         df = pd.read_csv(filepath)
-        # Safely convert string representations of lists back to actual lists
         for col in ['hashtags', 'mentions', 'urls']:
             if col in df.columns:
-                df[col] = df[col].apply(lambda x: eval(x) if isinstance(x, str) and x.startswith('[') else [])
+                try:
+                    df[col] = df[col].apply(lambda x: eval(x) if isinstance(x, str) and x.startswith('[') else [])
+                except Exception: df[col] = df[col].apply(lambda x: [])
         return df
     return pd.DataFrame()
 
@@ -43,12 +46,10 @@ def main():
 
     # --- Sidebar ---
     with st.sidebar:
-        st.image("https://i.imgur.com/gJt3eN1.png", width=100) # Placeholder logo
         st.title("🛡️ Project Argus")
         st.info("An early warning system for detecting and analyzing hostile digital campaigns.")
         
         data_path = os.path.join('data', 'analyzed_data.csv')
-        # --- THE FIX: Load the full dataset once ---
         full_df = load_data(data_path)
         
         if not full_df.empty:
@@ -58,44 +59,46 @@ def main():
             st.error("Data file not found. Please run the data pipeline.")
 
         st.header("Filters")
+        # In app.py, inside the sidebar
         min_engagement = st.slider(
-            "Filter by Minimum Engagement", 0, 
-            int(full_df['engagement_score'].max()) if not full_df.empty else 100, 10,
-            help="Filters the Threat Feed and Analytics tabs to focus on viral content. Does NOT affect Campaign Forensics."
+            "Filter by Minimum Engagement",
+            min_value=0,
+            max_value=175,  # <-- THIS IS THE CHANGE
+            value=0,       # Default starting value
+            help="Filters the Threat Feed and Analytics tabs to focus on viral content."
         )
     
     # --- Main Page ---
     st.title("Hostile Narrative Intelligence Dashboard")
 
     if not full_df.empty:
-        # --- THE FIX: Create a filtered version for display, but keep the original ---
         filtered_df = full_df[full_df['engagement_score'] >= min_engagement]
         st.write(f"Showing **{len(filtered_df)}** of **{len(full_df)}** total tweets based on filter.")
         
-        # --- Updated Tabs ---
+        # --- UPDATED TABS ---
         tab_titles = [
             "📈 **Vitals & KPIs**", 
             "🔥 **Threat Feed**", 
             "📊 **Analytical Charts**", 
+            "🌍 **Map View**",
             "🕸️ **Network Graph**",
             "🕵️ **Campaign Forensics**"
         ]
-        tab1, tab2, tab3, tab4, tab5 = st.tabs(tab_titles)
+        tab1, tab2, tab3, tab_map, tab4, tab5 = st.tabs(tab_titles)
         
-        # These tabs use the FILTERED data
         with tab1:
             display_kpi_metrics(filtered_df)
         with tab2:
             display_threat_feed(filtered_df)
         with tab3:
             display_analytics_charts(filtered_df)
+        with tab_map:
+            display_map_view(full_df) # Use the full dataset for a comprehensive map
         with tab4:
-            st.info("This is a live, interactive graph of the mention network. Drag nodes to explore connections.")
-            display_network_graph() # Network graph is generated from the full dataset offline
-            
-        # --- THE FIX: This tab uses the FULL, UNFILTERED dataset ---
+            st.info("This is a live, interactive graph of the mention network.")
+            display_network_graph()
         with tab5:
-            display_campaign_forensics(full_df) 
+            display_campaign_forensics(full_df)
             
     else:
         st.warning("No data to display. Please run the collector and analyzer scripts.")

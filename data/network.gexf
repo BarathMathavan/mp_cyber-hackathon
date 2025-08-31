@@ -1,649 +1,1042 @@
 <?xml version='1.0' encoding='utf-8'?>
 <gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
-  <meta lastmodifieddate="2025-08-30">
-    <creator>NetworkX 3.5</creator>
+  <meta lastmodifieddate="2025-08-31">
+    <creator>NetworkX 3.4.2</creator>
   </meta>
   <graph defaultedgetype="directed" mode="static" name="">
     <attributes mode="static" class="node">
       <attribute id="0" title="group" type="long" />
     </attributes>
     <nodes>
-      <node id="1861427757630287872" label="1861427757630287872">
+      <node id="2995667317" label="2995667317">
         <attvalues>
           <attvalue for="0" value="0" />
         </attvalues>
       </node>
-      <node id="DillyHussain88" label="DillyHussain88">
+      <node id="DrRajeshPatil20" label="DrRajeshPatil20">
         <attvalues>
           <attvalue for="0" value="0" />
         </attvalues>
       </node>
-      <node id="gmpolice" label="gmpolice">
+      <node id="PoMoGandhi" label="PoMoGandhi">
         <attvalues>
           <attvalue for="0" value="0" />
         </attvalues>
       </node>
-      <node id="1703774667394445312" label="1703774667394445312">
+      <node id="1486339253017919495" label="1486339253017919495">
         <attvalues>
           <attvalue for="0" value="1" />
         </attvalues>
       </node>
-      <node id="monidipadey" label="monidipadey">
+      <node id="rpuni" label="rpuni">
         <attvalues>
           <attvalue for="0" value="1" />
         </attvalues>
       </node>
-      <node id="punarutthana" label="punarutthana">
+      <node id="_ali_javed_" label="_ali_javed_">
         <attvalues>
           <attvalue for="0" value="1" />
         </attvalues>
       </node>
-      <node id="BattaKashmiri" label="BattaKashmiri">
-        <attvalues>
-          <attvalue for="0" value="1" />
-        </attvalues>
-      </node>
-      <node id="Incognito_qfs" label="Incognito_qfs">
-        <attvalues>
-          <attvalue for="0" value="1" />
-        </attvalues>
-      </node>
-      <node id="28335828" label="28335828">
+      <node id="1390324980106231809" label="1390324980106231809">
         <attvalues>
           <attvalue for="0" value="2" />
         </attvalues>
       </node>
-      <node id="ScCardoz" label="ScCardoz">
+      <node id="tanmoyofc" label="tanmoyofc">
         <attvalues>
           <attvalue for="0" value="2" />
         </attvalues>
       </node>
-      <node id="1730425278" label="1730425278">
+      <node id="Brijesh77956738" label="Brijesh77956738">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="MahiDJi2Boss22" label="MahiDJi2Boss22">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="muralitwit" label="muralitwit">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="Sanjvats" label="Sanjvats">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="ShrutiDhore" label="ShrutiDhore">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="VijaySingh_law" label="VijaySingh_law">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="RavinderKapur2" label="RavinderKapur2">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="taj_india007" label="taj_india007">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="1751891593425043456" label="1751891593425043456">
         <attvalues>
           <attvalue for="0" value="3" />
         </attvalues>
       </node>
-      <node id="sardesairajdeep" label="sardesairajdeep">
+      <node id="IndiaWarfare" label="IndiaWarfare">
         <attvalues>
           <attvalue for="0" value="3" />
+        </attvalues>
+      </node>
+      <node id="1910340227555569665" label="1910340227555569665">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </node>
+      <node id="VjTomz" label="VjTomz">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </node>
+      <node id="zoo_bear" label="zoo_bear">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </node>
+      <node id="1490067577736892416" label="1490067577736892416">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </node>
+      <node id="hindu_in_middle" label="hindu_in_middle">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </node>
+      <node id="iamJerusalem2" label="iamJerusalem2">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </node>
+      <node id="1892233214674042880" label="1892233214674042880">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </node>
+      <node id="BhavikKothari19" label="BhavikKothari19">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </node>
+      <node id="VishalBhargava5" label="VishalBhargava5">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </node>
+      <node id="1949898863751680003" label="1949898863751680003">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </node>
+      <node id="dreamlighthoriz" label="dreamlighthoriz">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </node>
+      <node id="brahmasmiti" label="brahmasmiti">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </node>
+      <node id="1561588050471395328" label="1561588050471395328">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </node>
+      <node id="sajadlone" label="sajadlone">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </node>
+      <node id="1627624701286834176" label="1627624701286834176">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </node>
+      <node id="JackofBlades22" label="JackofBlades22">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </node>
+      <node id="579192318" label="579192318">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </node>
+      <node id="incredibleindi0" label="incredibleindi0">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </node>
+      <node id="IranObserver0" label="IranObserver0">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </node>
+      <node id="1864010638617661440" label="1864010638617661440">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </node>
+      <node id="ARanganathan72" label="ARanganathan72">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </node>
+      <node id="ndtv" label="ndtv">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </node>
+      <node id="PadmajaJoshi" label="PadmajaJoshi">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </node>
+      <node id="1293601492889243648" label="1293601492889243648">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </node>
+      <node id="EtherEagle252" label="EtherEagle252">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </node>
+      <node id="Sagar020194" label="Sagar020194">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </node>
+      <node id="effsixteen" label="effsixteen">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </node>
+      <node id="LibleftEnjoyer" label="LibleftEnjoyer">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </node>
+      <node id="1720665183188922368" label="1720665183188922368">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="Asimpleguy96094" label="Asimpleguy96094">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="PitstopAt75093" label="PitstopAt75093">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="MrSinha_" label="MrSinha_">
+        <attvalues>
+          <attvalue for="0" value="33" />
         </attvalues>
       </node>
       <node id="1360202290934599680" label="1360202290934599680">
         <attvalues>
-          <attvalue for="0" value="11" />
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </node>
+      <node id="addu0987" label="addu0987">
+        <attvalues>
+          <attvalue for="0" value="15" />
         </attvalues>
       </node>
       <node id="Priyans28370412" label="Priyans28370412">
         <attvalues>
-          <attvalue for="0" value="11" />
+          <attvalue for="0" value="15" />
         </attvalues>
       </node>
       <node id="GopeshKhetan" label="GopeshKhetan">
         <attvalues>
-          <attvalue for="0" value="11" />
+          <attvalue for="0" value="15" />
         </attvalues>
       </node>
       <node id="gork" label="gork">
         <attvalues>
-          <attvalue for="0" value="11" />
+          <attvalue for="0" value="15" />
         </attvalues>
       </node>
       <node id="grok" label="grok">
         <attvalues>
-          <attvalue for="0" value="6" />
-        </attvalues>
-      </node>
-      <node id="3061600039" label="3061600039">
-        <attvalues>
-          <attvalue for="0" value="4" />
-        </attvalues>
-      </node>
-      <node id="catalyxspace" label="catalyxspace">
-        <attvalues>
-          <attvalue for="0" value="4" />
-        </attvalues>
-      </node>
-      <node id="1024688245521702913" label="1024688245521702913">
-        <attvalues>
-          <attvalue for="0" value="5" />
-        </attvalues>
-      </node>
-      <node id="Fasihrayeen" label="Fasihrayeen">
-        <attvalues>
-          <attvalue for="0" value="5" />
-        </attvalues>
-      </node>
-      <node id="97603597" label="97603597">
-        <attvalues>
-          <attvalue for="0" value="6" />
-        </attvalues>
-      </node>
-      <node id="DobbyTheSlayer1" label="DobbyTheSlayer1">
-        <attvalues>
-          <attvalue for="0" value="6" />
-        </attvalues>
-      </node>
-      <node id="cornelius_cen" label="cornelius_cen">
-        <attvalues>
-          <attvalue for="0" value="6" />
-        </attvalues>
-      </node>
-      <node id="afsdfgj" label="afsdfgj">
-        <attvalues>
-          <attvalue for="0" value="6" />
-        </attvalues>
-      </node>
-      <node id="PalhawatRadhika" label="PalhawatRadhika">
-        <attvalues>
-          <attvalue for="0" value="6" />
-        </attvalues>
-      </node>
-      <node id="897845496269611008" label="897845496269611008">
-        <attvalues>
-          <attvalue for="0" value="7" />
-        </attvalues>
-      </node>
-      <node id="ARN635" label="ARN635">
-        <attvalues>
-          <attvalue for="0" value="7" />
-        </attvalues>
-      </node>
-      <node id="SirJambavan" label="SirJambavan">
-        <attvalues>
-          <attvalue for="0" value="7" />
-        </attvalues>
-      </node>
-      <node id="KaavyaRBagri" label="KaavyaRBagri">
-        <attvalues>
-          <attvalue for="0" value="11" />
-        </attvalues>
-      </node>
-      <node id="officiallysane" label="officiallysane">
-        <attvalues>
-          <attvalue for="0" value="11" />
-        </attvalues>
-      </node>
-      <node id="1829425206617591808" label="1829425206617591808">
-        <attvalues>
-          <attvalue for="0" value="8" />
-        </attvalues>
-      </node>
-      <node id="IvankaNews_" label="IvankaNews_">
-        <attvalues>
-          <attvalue for="0" value="8" />
-        </attvalues>
-      </node>
-      <node id="1443630928908242945" label="1443630928908242945">
-        <attvalues>
-          <attvalue for="0" value="9" />
-        </attvalues>
-      </node>
-      <node id="BananaRepub69" label="BananaRepub69">
-        <attvalues>
-          <attvalue for="0" value="9" />
-        </attvalues>
-      </node>
-      <node id="Majk1024437" label="Majk1024437">
-        <attvalues>
-          <attvalue for="0" value="9" />
-        </attvalues>
-      </node>
-      <node id="bassem_youssef9" label="bassem_youssef9">
-        <attvalues>
-          <attvalue for="0" value="9" />
-        </attvalues>
-      </node>
-      <node id="1792951608344788992" label="1792951608344788992">
-        <attvalues>
-          <attvalue for="0" value="10" />
-        </attvalues>
-      </node>
-      <node id="dasyuslayer1" label="dasyuslayer1">
-        <attvalues>
-          <attvalue for="0" value="10" />
-        </attvalues>
-      </node>
-      <node id="733678637099143168" label="733678637099143168">
-        <attvalues>
-          <attvalue for="0" value="11" />
-        </attvalues>
-      </node>
-      <node id="akuparop" label="akuparop">
-        <attvalues>
-          <attvalue for="0" value="11" />
-        </attvalues>
-      </node>
-      <node id="1746588975614046208" label="1746588975614046208">
-        <attvalues>
-          <attvalue for="0" value="12" />
-        </attvalues>
-      </node>
-      <node id="Siddhar64850525" label="Siddhar64850525">
-        <attvalues>
-          <attvalue for="0" value="12" />
-        </attvalues>
-      </node>
-      <node id="ChinaSpox_India" label="ChinaSpox_India">
-        <attvalues>
-          <attvalue for="0" value="12" />
-        </attvalues>
-      </node>
-      <node id="1707150805" label="1707150805">
-        <attvalues>
-          <attvalue for="0" value="30" />
-        </attvalues>
-      </node>
-      <node id="_sabanaqvi" label="_sabanaqvi">
-        <attvalues>
-          <attvalue for="0" value="30" />
-        </attvalues>
-      </node>
-      <node id="USCIRF" label="USCIRF">
-        <attvalues>
-          <attvalue for="0" value="30" />
-        </attvalues>
-      </node>
-      <node id="851290496030855168" label="851290496030855168">
-        <attvalues>
-          <attvalue for="0" value="13" />
-        </attvalues>
-      </node>
-      <node id="OmarAbdullah" label="OmarAbdullah">
-        <attvalues>
-          <attvalue for="0" value="13" />
-        </attvalues>
-      </node>
-      <node id="1639958277483290624" label="1639958277483290624">
-        <attvalues>
-          <attvalue for="0" value="6" />
-        </attvalues>
-      </node>
-      <node id="1334732741708013574" label="1334732741708013574">
-        <attvalues>
-          <attvalue for="0" value="14" />
-        </attvalues>
-      </node>
-      <node id="ramvedii" label="ramvedii">
-        <attvalues>
-          <attvalue for="0" value="14" />
-        </attvalues>
-      </node>
-      <node id="1081878313780559873" label="1081878313780559873">
-        <attvalues>
           <attvalue for="0" value="15" />
         </attvalues>
       </node>
-      <node id="DrBush15" label="DrBush15">
+      <node id="1652675318682099712" label="1652675318682099712">
         <attvalues>
-          <attvalue for="0" value="15" />
+          <attvalue for="0" value="39" />
         </attvalues>
       </node>
-      <node id="Physics301" label="Physics301">
+      <node id="SusanSulli12381" label="SusanSulli12381">
         <attvalues>
-          <attvalue for="0" value="15" />
+          <attvalue for="0" value="39" />
         </attvalues>
       </node>
-      <node id="empire_sentry" label="empire_sentry">
+      <node id="Gp382002" label="Gp382002">
         <attvalues>
-          <attvalue for="0" value="15" />
-        </attvalues>
-      </node>
-      <node id="D_Tarczynski" label="D_Tarczynski">
-        <attvalues>
-          <attvalue for="0" value="15" />
-        </attvalues>
-      </node>
-      <node id="1937057839815761920" label="1937057839815761920">
-        <attvalues>
-          <attvalue for="0" value="16" />
-        </attvalues>
-      </node>
-      <node id="Swamy39" label="Swamy39">
-        <attvalues>
-          <attvalue for="0" value="16" />
-        </attvalues>
-      </node>
-      <node id="jagdishshetty" label="jagdishshetty">
-        <attvalues>
-          <attvalue for="0" value="16" />
-        </attvalues>
-      </node>
-      <node id="narendramodi" label="narendramodi">
-        <attvalues>
-          <attvalue for="0" value="16" />
-        </attvalues>
-      </node>
-      <node id="1356745165642354691" label="1356745165642354691">
-        <attvalues>
-          <attvalue for="0" value="16" />
-        </attvalues>
-      </node>
-      <node id="PMOIndia" label="PMOIndia">
-        <attvalues>
-          <attvalue for="0" value="16" />
-        </attvalues>
-      </node>
-      <node id="1525082770711658504" label="1525082770711658504">
-        <attvalues>
-          <attvalue for="0" value="17" />
-        </attvalues>
-      </node>
-      <node id="Reuters" label="Reuters">
-        <attvalues>
-          <attvalue for="0" value="17" />
-        </attvalues>
-      </node>
-      <node id="1734230216309133312" label="1734230216309133312">
-        <attvalues>
-          <attvalue for="0" value="18" />
-        </attvalues>
-      </node>
-      <node id="FattahbalochH" label="FattahbalochH">
-        <attvalues>
-          <attvalue for="0" value="18" />
-        </attvalues>
-      </node>
-      <node id="SouthernDefence" label="SouthernDefence">
-        <attvalues>
-          <attvalue for="0" value="18" />
-        </attvalues>
-      </node>
-      <node id="888544250723479552" label="888544250723479552">
-        <attvalues>
-          <attvalue for="0" value="19" />
-        </attvalues>
-      </node>
-      <node id="rajseshadri" label="rajseshadri">
-        <attvalues>
-          <attvalue for="0" value="19" />
-        </attvalues>
-      </node>
-      <node id="terryrus99" label="terryrus99">
-        <attvalues>
-          <attvalue for="0" value="19" />
-        </attvalues>
-      </node>
-      <node id="ryangrim" label="ryangrim">
-        <attvalues>
-          <attvalue for="0" value="19" />
-        </attvalues>
-      </node>
-      <node id="1648263162804961281" label="1648263162804961281">
-        <attvalues>
-          <attvalue for="0" value="20" />
-        </attvalues>
-      </node>
-      <node id="Sham_Bharat" label="Sham_Bharat">
-        <attvalues>
-          <attvalue for="0" value="20" />
-        </attvalues>
-      </node>
-      <node id="1852229311497170944" label="1852229311497170944">
-        <attvalues>
-          <attvalue for="0" value="21" />
-        </attvalues>
-      </node>
-      <node id="GreaterKashmir" label="GreaterKashmir">
-        <attvalues>
-          <attvalue for="0" value="21" />
-        </attvalues>
-      </node>
-      <node id="1650555935797153794" label="1650555935797153794">
-        <attvalues>
-          <attvalue for="0" value="22" />
-        </attvalues>
-      </node>
-      <node id="VHPDigital" label="VHPDigital">
-        <attvalues>
-          <attvalue for="0" value="22" />
-        </attvalues>
-      </node>
-      <node id="rss" label="rss">
-        <attvalues>
-          <attvalue for="0" value="22" />
-        </attvalues>
-      </node>
-      <node id="TulsiGabbard" label="TulsiGabbard">
-        <attvalues>
-          <attvalue for="0" value="22" />
-        </attvalues>
-      </node>
-      <node id="ANI" label="ANI">
-        <attvalues>
-          <attvalue for="0" value="22" />
-        </attvalues>
-      </node>
-      <node id="1453005127103750153" label="1453005127103750153">
-        <attvalues>
-          <attvalue for="0" value="23" />
-        </attvalues>
-      </node>
-      <node id="POTUS" label="POTUS">
-        <attvalues>
-          <attvalue for="0" value="23" />
-        </attvalues>
-      </node>
-      <node id="IMFNews" label="IMFNews">
-        <attvalues>
-          <attvalue for="0" value="23" />
-        </attvalues>
-      </node>
-      <node id="EUCouncil" label="EUCouncil">
-        <attvalues>
-          <attvalue for="0" value="23" />
-        </attvalues>
-      </node>
-      <node id="1684196284977287168" label="1684196284977287168">
-        <attvalues>
-          <attvalue for="0" value="3" />
-        </attvalues>
-      </node>
-      <node id="375038314" label="375038314">
-        <attvalues>
-          <attvalue for="0" value="24" />
-        </attvalues>
-      </node>
-      <node id="Mohansinha" label="Mohansinha">
-        <attvalues>
-          <attvalue for="0" value="24" />
-        </attvalues>
-      </node>
-      <node id="1439618116602916867" label="1439618116602916867">
-        <attvalues>
-          <attvalue for="0" value="25" />
-        </attvalues>
-      </node>
-      <node id="ItsShubhangi" label="ItsShubhangi">
-        <attvalues>
-          <attvalue for="0" value="25" />
-        </attvalues>
-      </node>
-      <node id="1533846670152179714" label="1533846670152179714">
-        <attvalues>
-          <attvalue for="0" value="26" />
-        </attvalues>
-      </node>
-      <node id="MeghUpdates" label="MeghUpdates">
-        <attvalues>
-          <attvalue for="0" value="26" />
-        </attvalues>
-      </node>
-      <node id="1311127075957350400" label="1311127075957350400">
-        <attvalues>
-          <attvalue for="0" value="16" />
-        </attvalues>
-      </node>
-      <node id="realDonaldTrump" label="realDonaldTrump">
-        <attvalues>
-          <attvalue for="0" value="16" />
-        </attvalues>
-      </node>
-      <node id="1879493498967400448" label="1879493498967400448">
-        <attvalues>
-          <attvalue for="0" value="27" />
-        </attvalues>
-      </node>
-      <node id="HindutvaDiva" label="HindutvaDiva">
-        <attvalues>
-          <attvalue for="0" value="27" />
-        </attvalues>
-      </node>
-      <node id="1614795745877712897" label="1614795745877712897">
-        <attvalues>
-          <attvalue for="0" value="28" />
-        </attvalues>
-      </node>
-      <node id="RSSorg" label="RSSorg">
-        <attvalues>
-          <attvalue for="0" value="28" />
-        </attvalues>
-      </node>
-      <node id="1830885883228114947" label="1830885883228114947">
-        <attvalues>
-          <attvalue for="0" value="29" />
+          <attvalue for="0" value="39" />
         </attvalues>
       </node>
       <node id="elonmusk" label="elonmusk">
         <attvalues>
-          <attvalue for="0" value="29" />
+          <attvalue for="0" value="39" />
         </attvalues>
       </node>
-      <node id="100777670" label="100777670">
+      <node id="1946081463574872064" label="1946081463574872064">
         <attvalues>
-          <attvalue for="0" value="30" />
+          <attvalue for="0" value="13" />
         </attvalues>
       </node>
-      <node id="khanumarfa" label="khanumarfa">
+      <node id="MeghUpdates" label="MeghUpdates">
         <attvalues>
-          <attvalue for="0" value="30" />
+          <attvalue for="0" value="13" />
         </attvalues>
       </node>
-      <node id="RanaAyyub" label="RanaAyyub">
+      <node id="1822244479870349313" label="1822244479870349313">
         <attvalues>
-          <attvalue for="0" value="30" />
+          <attvalue for="0" value="14" />
         </attvalues>
       </node>
-      <node id="_sayema" label="_sayema">
+      <node id="GemstaJames" label="GemstaJames">
         <attvalues>
-          <attvalue for="0" value="30" />
+          <attvalue for="0" value="14" />
         </attvalues>
       </node>
-      <node id="25429629" label="25429629">
+      <node id="bhakumchi" label="bhakumchi">
         <attvalues>
-          <attvalue for="0" value="31" />
+          <attvalue for="0" value="14" />
         </attvalues>
       </node>
-      <node id="Ram_Guha" label="Ram_Guha">
+      <node id="impatelhimanshu" label="impatelhimanshu">
         <attvalues>
-          <attvalue for="0" value="31" />
+          <attvalue for="0" value="14" />
+        </attvalues>
+      </node>
+      <node id="_Saffron_Girl_" label="_Saffron_Girl_">
+        <attvalues>
+          <attvalue for="0" value="14" />
+        </attvalues>
+      </node>
+      <node id="1928346760373751811" label="1928346760373751811">
+        <attvalues>
+          <attvalue for="0" value="14" />
+        </attvalues>
+      </node>
+      <node id="yaronN982" label="yaronN982">
+        <attvalues>
+          <attvalue for="0" value="14" />
+        </attvalues>
+      </node>
+      <node id="SanataniSpeaks" label="SanataniSpeaks">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </node>
+      <node id="ElijahPearloffc" label="ElijahPearloffc">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </node>
+      <node id="Warlock_mohit" label="Warlock_mohit">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </node>
+      <node id="1804115924179652608" label="1804115924179652608">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </node>
+      <node id="Nepali_Comrade" label="Nepali_Comrade">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </node>
+      <node id="Piyush05092152" label="Piyush05092152">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="MohsinAnsa24152" label="MohsinAnsa24152">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="himantabiswa" label="himantabiswa">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="sammypurpose" label="sammypurpose">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="RantStormmm" label="RantStormmm">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="stats_feed" label="stats_feed">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="1573884072337838080" label="1573884072337838080">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </node>
+      <node id="Fatima_Khatun01" label="Fatima_Khatun01">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </node>
+      <node id="socialmediatbn" label="socialmediatbn">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="ani_digital" label="ani_digital">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="ANI" label="ANI">
+        <attvalues>
+          <attvalue for="0" value="33" />
         </attvalues>
       </node>
       <node id="RahulGandhi" label="RahulGandhi">
         <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="PChidambaram_IN" label="PChidambaram_IN">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="1178138174196862976" label="1178138174196862976">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </node>
+      <node id="abinash_013" label="abinash_013">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </node>
+      <node id="SatyajeetM72938" label="SatyajeetM72938">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </node>
+      <node id="1913458750674853888" label="1913458750674853888">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </node>
+      <node id="Megatron_ron" label="Megatron_ron">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </node>
+      <node id="1695693512384368640" label="1695693512384368640">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </node>
+      <node id="AhmedShahAzfar" label="AhmedShahAzfar">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </node>
+      <node id="SirLordHenry666" label="SirLordHenry666">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </node>
+      <node id="AngkoLIfe" label="AngkoLIfe">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </node>
+      <node id="BNPTheGayParty" label="BNPTheGayParty">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </node>
+      <node id="stereotype_bong" label="stereotype_bong">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </node>
+      <node id="satyanewshi" label="satyanewshi">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </node>
+      <node id="AskPerplexity" label="AskPerplexity">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </node>
+      <node id="1564053322029580288" label="1564053322029580288">
+        <attvalues>
+          <attvalue for="0" value="20" />
+        </attvalues>
+      </node>
+      <node id="19Maradona_" label="19Maradona_">
+        <attvalues>
+          <attvalue for="0" value="20" />
+        </attvalues>
+      </node>
+      <node id="888822504067801088" label="888822504067801088">
+        <attvalues>
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </node>
+      <node id="1491983279570157568" label="1491983279570157568">
+        <attvalues>
+          <attvalue for="0" value="21" />
+        </attvalues>
+      </node>
+      <node id="chaturchampak" label="chaturchampak">
+        <attvalues>
+          <attvalue for="0" value="21" />
+        </attvalues>
+      </node>
+      <node id="ajay43" label="ajay43">
+        <attvalues>
+          <attvalue for="0" value="21" />
+        </attvalues>
+      </node>
+      <node id="1951003071506460672" label="1951003071506460672">
+        <attvalues>
+          <attvalue for="0" value="22" />
+        </attvalues>
+      </node>
+      <node id="YappAppLtd" label="YappAppLtd">
+        <attvalues>
+          <attvalue for="0" value="22" />
+        </attvalues>
+      </node>
+      <node id="1746588975614046208" label="1746588975614046208">
+        <attvalues>
+          <attvalue for="0" value="23" />
+        </attvalues>
+      </node>
+      <node id="mightymoosh7" label="mightymoosh7">
+        <attvalues>
+          <attvalue for="0" value="23" />
+        </attvalues>
+      </node>
+      <node id="narendramodi" label="narendramodi">
+        <attvalues>
+          <attvalue for="0" value="23" />
+        </attvalues>
+      </node>
+      <node id="36072752" label="36072752">
+        <attvalues>
+          <attvalue for="0" value="24" />
+        </attvalues>
+      </node>
+      <node id="DoctorKazimi" label="DoctorKazimi">
+        <attvalues>
+          <attvalue for="0" value="24" />
+        </attvalues>
+      </node>
+      <node id="KantInEastt" label="KantInEastt">
+        <attvalues>
+          <attvalue for="0" value="24" />
+        </attvalues>
+      </node>
+      <node id="1919882916437389313" label="1919882916437389313">
+        <attvalues>
+          <attvalue for="0" value="25" />
+        </attvalues>
+      </node>
+      <node id="NewsIADN" label="NewsIADN">
+        <attvalues>
+          <attvalue for="0" value="25" />
+        </attvalues>
+      </node>
+      <node id="1162739178821443590" label="1162739178821443590">
+        <attvalues>
+          <attvalue for="0" value="26" />
+        </attvalues>
+      </node>
+      <node id="ada_lluch" label="ada_lluch">
+        <attvalues>
+          <attvalue for="0" value="26" />
+        </attvalues>
+      </node>
+      <node id="1640965025295892480" label="1640965025295892480">
+        <attvalues>
+          <attvalue for="0" value="27" />
+        </attvalues>
+      </node>
+      <node id="TimesAlgebraIND" label="TimesAlgebraIND">
+        <attvalues>
+          <attvalue for="0" value="27" />
+        </attvalues>
+      </node>
+      <node id="1523187195279908864" label="1523187195279908864">
+        <attvalues>
+          <attvalue for="0" value="28" />
+        </attvalues>
+      </node>
+      <node id="PsyOpValkyrie" label="PsyOpValkyrie">
+        <attvalues>
+          <attvalue for="0" value="28" />
+        </attvalues>
+      </node>
+      <node id="1831770234988195840" label="1831770234988195840">
+        <attvalues>
+          <attvalue for="0" value="29" />
+        </attvalues>
+      </node>
+      <node id="mohdjauwwadalam" label="mohdjauwwadalam">
+        <attvalues>
+          <attvalue for="0" value="29" />
+        </attvalues>
+      </node>
+      <node id="PMOIndia" label="PMOIndia">
+        <attvalues>
+          <attvalue for="0" value="29" />
+        </attvalues>
+      </node>
+      <node id="UNHumanRights" label="UNHumanRights">
+        <attvalues>
+          <attvalue for="0" value="29" />
+        </attvalues>
+      </node>
+      <node id="humanesociety" label="humanesociety">
+        <attvalues>
+          <attvalue for="0" value="29" />
+        </attvalues>
+      </node>
+      <node id="OICatUN" label="OICatUN">
+        <attvalues>
+          <attvalue for="0" value="29" />
+        </attvalues>
+      </node>
+      <node id="asadowaisi" label="asadowaisi">
+        <attvalues>
+          <attvalue for="0" value="29" />
+        </attvalues>
+      </node>
+      <node id="humanrights1st" label="humanrights1st">
+        <attvalues>
+          <attvalue for="0" value="29" />
+        </attvalues>
+      </node>
+      <node id="45547891" label="45547891">
+        <attvalues>
+          <attvalue for="0" value="30" />
+        </attvalues>
+      </node>
+      <node id="WokePandemic" label="WokePandemic">
+        <attvalues>
+          <attvalue for="0" value="30" />
+        </attvalues>
+      </node>
+      <node id="948171927801102337" label="948171927801102337">
+        <attvalues>
           <attvalue for="0" value="31" />
         </attvalues>
       </node>
-      <node id="829306145475002370" label="829306145475002370">
+      <node id="RajeshwariRW" label="RajeshwariRW">
+        <attvalues>
+          <attvalue for="0" value="31" />
+        </attvalues>
+      </node>
+      <node id="1321870992" label="1321870992">
         <attvalues>
           <attvalue for="0" value="32" />
         </attvalues>
       </node>
-      <node id="DilrajD5" label="DilrajD5">
+      <node id="Chaotic_mind99" label="Chaotic_mind99">
         <attvalues>
           <attvalue for="0" value="32" />
         </attvalues>
       </node>
-      <node id="fuddukismatwala" label="fuddukismatwala">
+      <node id="nd" label="nd">
         <attvalues>
           <attvalue for="0" value="32" />
         </attvalues>
       </node>
-      <node id="kushal_mehra" label="kushal_mehra">
+      <node id="298688880" label="298688880">
         <attvalues>
-          <attvalue for="0" value="32" />
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="920988937904013312" label="920988937904013312">
+        <attvalues>
+          <attvalue for="0" value="34" />
+        </attvalues>
+      </node>
+      <node id="DEEPUVAJRAMUNI" label="DEEPUVAJRAMUNI">
+        <attvalues>
+          <attvalue for="0" value="34" />
+        </attvalues>
+      </node>
+      <node id="433376485" label="433376485">
+        <attvalues>
+          <attvalue for="0" value="23" />
+        </attvalues>
+      </node>
+      <node id="1130389106" label="1130389106">
+        <attvalues>
+          <attvalue for="0" value="35" />
+        </attvalues>
+      </node>
+      <node id="ate" label="ate">
+        <attvalues>
+          <attvalue for="0" value="35" />
+        </attvalues>
+      </node>
+      <node id="JPN_PMO" label="JPN_PMO">
+        <attvalues>
+          <attvalue for="0" value="35" />
+        </attvalues>
+      </node>
+      <node id="1539591727471742976" label="1539591727471742976">
+        <attvalues>
+          <attvalue for="0" value="36" />
+        </attvalues>
+      </node>
+      <node id="RadioEuropes" label="RadioEuropes">
+        <attvalues>
+          <attvalue for="0" value="36" />
+        </attvalues>
+      </node>
+      <node id="Swajeet2311" label="Swajeet2311">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </node>
+      <node id="umerzai_b" label="umerzai_b">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </node>
+      <node id="1749310993048514560" label="1749310993048514560">
+        <attvalues>
+          <attvalue for="0" value="37" />
+        </attvalues>
+      </node>
+      <node id="RoshanKrRaii" label="RoshanKrRaii">
+        <attvalues>
+          <attvalue for="0" value="37" />
+        </attvalues>
+      </node>
+      <node id="BengaliConnect" label="BengaliConnect">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="tjt4002" label="tjt4002">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="407575034" label="407575034">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </node>
+      <node id="Zaarasyedd_" label="Zaarasyedd_">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </node>
+      <node id="NamitaBalyan" label="NamitaBalyan">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </node>
+      <node id="1932782629646184453" label="1932782629646184453">
+        <attvalues>
+          <attvalue for="0" value="38" />
+        </attvalues>
+      </node>
+      <node id="RealBababanaras" label="RealBababanaras">
+        <attvalues>
+          <attvalue for="0" value="38" />
+        </attvalues>
+      </node>
+      <node id="1635117060341604352" label="1635117060341604352">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="faizulhaque95" label="faizulhaque95">
+        <attvalues>
+          <attvalue for="0" value="33" />
+        </attvalues>
+      </node>
+      <node id="1568197454935511044" label="1568197454935511044">
+        <attvalues>
+          <attvalue for="0" value="39" />
+        </attvalues>
+      </node>
+      <node id="FarazPervaiz3" label="FarazPervaiz3">
+        <attvalues>
+          <attvalue for="0" value="39" />
+        </attvalues>
+      </node>
+      <node id="IndiaWarZone" label="IndiaWarZone">
+        <attvalues>
+          <attvalue for="0" value="25" />
+        </attvalues>
+      </node>
+      <node id="Mkhizer95" label="Mkhizer95">
+        <attvalues>
+          <attvalue for="0" value="25" />
+        </attvalues>
+      </node>
+      <node id="C0b1ra" label="C0b1ra">
+        <attvalues>
+          <attvalue for="0" value="25" />
+        </attvalues>
+      </node>
+      <node id="BRICSinfo" label="BRICSinfo">
+        <attvalues>
+          <attvalue for="0" value="25" />
+        </attvalues>
+      </node>
+      <node id="donyaihsan" label="donyaihsan">
+        <attvalues>
+          <attvalue for="0" value="25" />
+        </attvalues>
+      </node>
+      <node id="DrLoupis__" label="DrLoupis__">
+        <attvalues>
+          <attvalue for="0" value="25" />
+        </attvalues>
+      </node>
+      <node id="1501976301174870020" label="1501976301174870020">
+        <attvalues>
+          <attvalue for="0" value="40" />
+        </attvalues>
+      </node>
+      <node id="Tomcruise9995" label="Tomcruise9995">
+        <attvalues>
+          <attvalue for="0" value="40" />
+        </attvalues>
+      </node>
+      <node id="PawanKalyan" label="PawanKalyan">
+        <attvalues>
+          <attvalue for="0" value="40" />
+        </attvalues>
+      </node>
+      <node id="1919893444513955841" label="1919893444513955841">
+        <attvalues>
+          <attvalue for="0" value="41" />
+        </attvalues>
+      </node>
+      <node id="BBCWorld" label="BBCWorld">
+        <attvalues>
+          <attvalue for="0" value="41" />
+        </attvalues>
+      </node>
+      <node id="111601141" label="111601141">
+        <attvalues>
+          <attvalue for="0" value="23" />
+        </attvalues>
+      </node>
+      <node id="mktyaggi" label="mktyaggi">
+        <attvalues>
+          <attvalue for="0" value="23" />
+        </attvalues>
+      </node>
+      <node id="myogiadityanath" label="myogiadityanath">
+        <attvalues>
+          <attvalue for="0" value="23" />
+        </attvalues>
+      </node>
+      <node id="PrashantKishor" label="PrashantKishor">
+        <attvalues>
+          <attvalue for="0" value="23" />
+        </attvalues>
+      </node>
+      <node id="1394674940121522180" label="1394674940121522180">
+        <attvalues>
+          <attvalue for="0" value="42" />
+        </attvalues>
+      </node>
+      <node id="vivekagnihotri" label="vivekagnihotri">
+        <attvalues>
+          <attvalue for="0" value="42" />
         </attvalues>
       </node>
     </nodes>
     <edges>
-      <edge source="1861427757630287872" target="DillyHussain88" id="0" />
-      <edge source="1861427757630287872" target="gmpolice" id="1" />
-      <edge source="1703774667394445312" target="monidipadey" id="2" />
-      <edge source="1703774667394445312" target="punarutthana" id="3" />
-      <edge source="1703774667394445312" target="BattaKashmiri" id="4" />
-      <edge source="1703774667394445312" target="Incognito_qfs" id="5" />
-      <edge source="28335828" target="ScCardoz" id="6" />
-      <edge source="1730425278" target="sardesairajdeep" id="7" />
-      <edge source="1360202290934599680" target="Priyans28370412" id="8" />
-      <edge source="1360202290934599680" target="GopeshKhetan" id="9" />
-      <edge source="1360202290934599680" target="gork" id="10" />
-      <edge source="1360202290934599680" target="grok" id="11" />
-      <edge source="1360202290934599680" target="KaavyaRBagri" id="12" />
-      <edge source="1360202290934599680" target="officiallysane" id="13" />
-      <edge source="3061600039" target="catalyxspace" id="14" />
-      <edge source="1024688245521702913" target="Fasihrayeen" id="15" />
-      <edge source="97603597" target="DobbyTheSlayer1" id="16" />
-      <edge source="97603597" target="grok" id="17" />
-      <edge source="97603597" target="cornelius_cen" id="18" />
-      <edge source="97603597" target="afsdfgj" id="19" />
-      <edge source="97603597" target="PalhawatRadhika" id="20" />
-      <edge source="897845496269611008" target="ARN635" id="21" />
-      <edge source="897845496269611008" target="SirJambavan" id="22" />
-      <edge source="1829425206617591808" target="IvankaNews_" id="23" />
-      <edge source="1443630928908242945" target="BananaRepub69" id="24" />
-      <edge source="1443630928908242945" target="Majk1024437" id="25" />
-      <edge source="1443630928908242945" target="bassem_youssef9" id="26" />
-      <edge source="1792951608344788992" target="dasyuslayer1" id="27" />
-      <edge source="733678637099143168" target="akuparop" id="28" />
-      <edge source="733678637099143168" target="GopeshKhetan" id="29" />
-      <edge source="1746588975614046208" target="Siddhar64850525" id="30" />
-      <edge source="1746588975614046208" target="ChinaSpox_India" id="31" />
-      <edge source="1707150805" target="_sabanaqvi" id="32" />
-      <edge source="1707150805" target="USCIRF" id="33" />
-      <edge source="851290496030855168" target="OmarAbdullah" id="34" />
-      <edge source="1639958277483290624" target="PalhawatRadhika" id="35" />
-      <edge source="1334732741708013574" target="ramvedii" id="36" />
-      <edge source="1081878313780559873" target="DrBush15" id="37" />
-      <edge source="1081878313780559873" target="Physics301" id="38" />
-      <edge source="1081878313780559873" target="empire_sentry" id="39" />
-      <edge source="1081878313780559873" target="D_Tarczynski" id="40" />
-      <edge source="1937057839815761920" target="Swamy39" id="41" />
-      <edge source="1937057839815761920" target="jagdishshetty" id="42" />
-      <edge source="1937057839815761920" target="narendramodi" id="43" />
-      <edge source="1356745165642354691" target="PMOIndia" id="44" />
-      <edge source="1356745165642354691" target="narendramodi" id="45" />
-      <edge source="1525082770711658504" target="Reuters" id="46" />
-      <edge source="1734230216309133312" target="FattahbalochH" id="47" />
-      <edge source="1734230216309133312" target="SouthernDefence" id="48" />
-      <edge source="888544250723479552" target="rajseshadri" id="49" />
-      <edge source="888544250723479552" target="terryrus99" id="50" />
-      <edge source="888544250723479552" target="ryangrim" id="51" />
-      <edge source="1648263162804961281" target="Sham_Bharat" id="52" />
-      <edge source="1852229311497170944" target="GreaterKashmir" id="53" />
-      <edge source="1650555935797153794" target="VHPDigital" id="54" />
-      <edge source="1650555935797153794" target="rss" id="55" />
-      <edge source="1650555935797153794" target="TulsiGabbard" id="56" />
-      <edge source="1650555935797153794" target="ANI" id="57" />
-      <edge source="1453005127103750153" target="POTUS" id="58" />
-      <edge source="1453005127103750153" target="IMFNews" id="59" />
-      <edge source="1453005127103750153" target="EUCouncil" id="60" />
-      <edge source="1684196284977287168" target="sardesairajdeep" id="61" />
-      <edge source="375038314" target="Mohansinha" id="62" />
-      <edge source="1439618116602916867" target="ItsShubhangi" id="63" />
-      <edge source="1533846670152179714" target="MeghUpdates" id="64" />
-      <edge source="1311127075957350400" target="PMOIndia" id="65" />
-      <edge source="1311127075957350400" target="realDonaldTrump" id="66" />
-      <edge source="1879493498967400448" target="HindutvaDiva" id="67" />
-      <edge source="1614795745877712897" target="RSSorg" id="68" />
-      <edge source="1830885883228114947" target="elonmusk" id="69" />
-      <edge source="100777670" target="khanumarfa" id="70" />
-      <edge source="100777670" target="RanaAyyub" id="71" />
-      <edge source="100777670" target="_sabanaqvi" id="72" />
-      <edge source="100777670" target="_sayema" id="73" />
-      <edge source="25429629" target="Ram_Guha" id="74" />
-      <edge source="25429629" target="RahulGandhi" id="75" />
-      <edge source="829306145475002370" target="DilrajD5" id="76" />
-      <edge source="829306145475002370" target="fuddukismatwala" id="77" />
-      <edge source="829306145475002370" target="kushal_mehra" id="78" />
+      <edge source="2995667317" target="DrRajeshPatil20" id="0" />
+      <edge source="2995667317" target="PoMoGandhi" id="1" />
+      <edge source="1486339253017919495" target="rpuni" id="2" />
+      <edge source="1486339253017919495" target="_ali_javed_" id="3" />
+      <edge source="1390324980106231809" target="tanmoyofc" id="4" />
+      <edge source="1390324980106231809" target="Brijesh77956738" id="5" />
+      <edge source="1390324980106231809" target="MahiDJi2Boss22" id="6" />
+      <edge source="1390324980106231809" target="muralitwit" id="7" />
+      <edge source="1390324980106231809" target="Sanjvats" id="8" />
+      <edge source="1390324980106231809" target="ShrutiDhore" id="9" />
+      <edge source="1390324980106231809" target="VijaySingh_law" id="10" />
+      <edge source="1390324980106231809" target="RavinderKapur2" id="11" />
+      <edge source="1390324980106231809" target="taj_india007" id="12" />
+      <edge source="1751891593425043456" target="IndiaWarfare" id="13" />
+      <edge source="1751891593425043456" target="LibleftEnjoyer" id="14" />
+      <edge source="1910340227555569665" target="VjTomz" id="15" />
+      <edge source="1910340227555569665" target="zoo_bear" id="16" />
+      <edge source="1490067577736892416" target="hindu_in_middle" id="17" />
+      <edge source="1490067577736892416" target="iamJerusalem2" id="18" />
+      <edge source="1892233214674042880" target="BhavikKothari19" id="19" />
+      <edge source="1892233214674042880" target="VishalBhargava5" id="20" />
+      <edge source="1949898863751680003" target="dreamlighthoriz" id="21" />
+      <edge source="1949898863751680003" target="brahmasmiti" id="22" />
+      <edge source="1561588050471395328" target="sajadlone" id="23" />
+      <edge source="1627624701286834176" target="JackofBlades22" id="24" />
+      <edge source="579192318" target="incredibleindi0" id="25" />
+      <edge source="579192318" target="IranObserver0" id="26" />
+      <edge source="1864010638617661440" target="ARanganathan72" id="27" />
+      <edge source="1864010638617661440" target="ndtv" id="28" />
+      <edge source="1864010638617661440" target="PadmajaJoshi" id="29" />
+      <edge source="1293601492889243648" target="EtherEagle252" id="30" />
+      <edge source="1293601492889243648" target="Sagar020194" id="31" />
+      <edge source="1293601492889243648" target="effsixteen" id="32" />
+      <edge source="1293601492889243648" target="Swajeet2311" id="33" />
+      <edge source="1293601492889243648" target="umerzai_b" id="34" />
+      <edge source="1720665183188922368" target="Asimpleguy96094" id="35" />
+      <edge source="1720665183188922368" target="PitstopAt75093" id="36" />
+      <edge source="1720665183188922368" target="MrSinha_" id="37" />
+      <edge source="1720665183188922368" target="Piyush05092152" id="38" />
+      <edge source="1720665183188922368" target="MohsinAnsa24152" id="39" />
+      <edge source="1720665183188922368" target="himantabiswa" id="40" />
+      <edge source="1720665183188922368" target="sammypurpose" id="41" />
+      <edge source="1720665183188922368" target="RantStormmm" id="42" />
+      <edge source="1720665183188922368" target="stats_feed" id="43" />
+      <edge source="1720665183188922368" target="socialmediatbn" id="44" />
+      <edge source="1720665183188922368" target="ani_digital" id="45" />
+      <edge source="1720665183188922368" target="ANI" id="46" />
+      <edge source="1720665183188922368" target="RahulGandhi" id="47" />
+      <edge source="1720665183188922368" target="PChidambaram_IN" id="48" />
+      <edge source="1720665183188922368" target="BengaliConnect" id="49" />
+      <edge source="1720665183188922368" target="tjt4002" id="50" />
+      <edge source="1360202290934599680" target="addu0987" id="51" />
+      <edge source="1360202290934599680" target="Priyans28370412" id="52" />
+      <edge source="1360202290934599680" target="GopeshKhetan" id="53" />
+      <edge source="1360202290934599680" target="gork" id="54" />
+      <edge source="1360202290934599680" target="grok" id="55" />
+      <edge source="1360202290934599680" target="SanataniSpeaks" id="56" />
+      <edge source="1360202290934599680" target="ElijahPearloffc" id="57" />
+      <edge source="1360202290934599680" target="Warlock_mohit" id="58" />
+      <edge source="1652675318682099712" target="SusanSulli12381" id="59" />
+      <edge source="1652675318682099712" target="Gp382002" id="60" />
+      <edge source="1652675318682099712" target="elonmusk" id="61" />
+      <edge source="1946081463574872064" target="MeghUpdates" id="62" />
+      <edge source="1822244479870349313" target="GemstaJames" id="63" />
+      <edge source="1822244479870349313" target="bhakumchi" id="64" />
+      <edge source="1822244479870349313" target="impatelhimanshu" id="65" />
+      <edge source="1822244479870349313" target="_Saffron_Girl_" id="66" />
+      <edge source="1928346760373751811" target="yaronN982" id="67" />
+      <edge source="1928346760373751811" target="bhakumchi" id="68" />
+      <edge source="1928346760373751811" target="impatelhimanshu" id="69" />
+      <edge source="1928346760373751811" target="_Saffron_Girl_" id="70" />
+      <edge source="1804115924179652608" target="grok" id="71" />
+      <edge source="1804115924179652608" target="Nepali_Comrade" id="72" />
+      <edge source="1573884072337838080" target="Fatima_Khatun01" id="73" />
+      <edge source="1178138174196862976" target="abinash_013" id="74" />
+      <edge source="1178138174196862976" target="SatyajeetM72938" id="75" />
+      <edge source="1913458750674853888" target="Megatron_ron" id="76" />
+      <edge source="1695693512384368640" target="AhmedShahAzfar" id="77" />
+      <edge source="1695693512384368640" target="SirLordHenry666" id="78" />
+      <edge source="1695693512384368640" target="AngkoLIfe" id="79" />
+      <edge source="1695693512384368640" target="BNPTheGayParty" id="80" />
+      <edge source="1695693512384368640" target="stereotype_bong" id="81" />
+      <edge source="1695693512384368640" target="satyanewshi" id="82" />
+      <edge source="1695693512384368640" target="AskPerplexity" id="83" />
+      <edge source="1564053322029580288" target="19Maradona_" id="84" />
+      <edge source="888822504067801088" target="MeghUpdates" id="85" />
+      <edge source="1491983279570157568" target="chaturchampak" id="86" />
+      <edge source="1491983279570157568" target="ajay43" id="87" />
+      <edge source="1951003071506460672" target="YappAppLtd" id="88" />
+      <edge source="1746588975614046208" target="mightymoosh7" id="89" />
+      <edge source="1746588975614046208" target="narendramodi" id="90" />
+      <edge source="36072752" target="DoctorKazimi" id="91" />
+      <edge source="36072752" target="KantInEastt" id="92" />
+      <edge source="1919882916437389313" target="NewsIADN" id="93" />
+      <edge source="1919882916437389313" target="IndiaWarZone" id="94" />
+      <edge source="1919882916437389313" target="Mkhizer95" id="95" />
+      <edge source="1919882916437389313" target="C0b1ra" id="96" />
+      <edge source="1919882916437389313" target="BRICSinfo" id="97" />
+      <edge source="1919882916437389313" target="donyaihsan" id="98" />
+      <edge source="1919882916437389313" target="DrLoupis__" id="99" />
+      <edge source="1162739178821443590" target="ada_lluch" id="100" />
+      <edge source="1640965025295892480" target="TimesAlgebraIND" id="101" />
+      <edge source="1523187195279908864" target="PsyOpValkyrie" id="102" />
+      <edge source="1831770234988195840" target="mohdjauwwadalam" id="103" />
+      <edge source="1831770234988195840" target="PMOIndia" id="104" />
+      <edge source="1831770234988195840" target="UNHumanRights" id="105" />
+      <edge source="1831770234988195840" target="humanesociety" id="106" />
+      <edge source="1831770234988195840" target="OICatUN" id="107" />
+      <edge source="1831770234988195840" target="asadowaisi" id="108" />
+      <edge source="1831770234988195840" target="humanrights1st" id="109" />
+      <edge source="45547891" target="WokePandemic" id="110" />
+      <edge source="948171927801102337" target="RajeshwariRW" id="111" />
+      <edge source="1321870992" target="Chaotic_mind99" id="112" />
+      <edge source="1321870992" target="nd" id="113" />
+      <edge source="298688880" target="himantabiswa" id="114" />
+      <edge source="298688880" target="faizulhaque95" id="115" />
+      <edge source="920988937904013312" target="DEEPUVAJRAMUNI" id="116" />
+      <edge source="433376485" target="narendramodi" id="117" />
+      <edge source="1130389106" target="ate" id="118" />
+      <edge source="1130389106" target="JPN_PMO" id="119" />
+      <edge source="1539591727471742976" target="RadioEuropes" id="120" />
+      <edge source="1749310993048514560" target="RoshanKrRaii" id="121" />
+      <edge source="407575034" target="Zaarasyedd_" id="122" />
+      <edge source="407575034" target="NamitaBalyan" id="123" />
+      <edge source="407575034" target="grok" id="124" />
+      <edge source="1932782629646184453" target="RealBababanaras" id="125" />
+      <edge source="1635117060341604352" target="faizulhaque95" id="126" />
+      <edge source="1568197454935511044" target="FarazPervaiz3" id="127" />
+      <edge source="1568197454935511044" target="elonmusk" id="128" />
+      <edge source="1501976301174870020" target="Tomcruise9995" id="129" />
+      <edge source="1501976301174870020" target="PawanKalyan" id="130" />
+      <edge source="1919893444513955841" target="BBCWorld" id="131" />
+      <edge source="111601141" target="mktyaggi" id="132" />
+      <edge source="111601141" target="narendramodi" id="133" />
+      <edge source="111601141" target="myogiadityanath" id="134" />
+      <edge source="111601141" target="PrashantKishor" id="135" />
+      <edge source="1394674940121522180" target="vivekagnihotri" id="136" />
     </edges>
   </graph>
 </gexf>

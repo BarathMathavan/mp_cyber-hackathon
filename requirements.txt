@@ -16,3 +16,4 @@ textblob
 networkx
 pyvis
 plotly
+geopy
